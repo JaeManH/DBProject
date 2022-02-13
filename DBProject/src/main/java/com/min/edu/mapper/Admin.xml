@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.min.edu.admin">
+<insert id="insertAdminAll" parameterType="adminvo">
+INSERT INTO ADMIN
+(ADMIN_ID, ADMIN_LOGINID, ADMIN_PASSWORD, ADMIN_NAME)
+VALUES((SELECT NVL(MAX(ADMIN_ID),0) FROM "ADMIN" a)+1, #{admin_loginid}, #{admin_password}, #{admin_name})
+
+</insert>
+</mapper>

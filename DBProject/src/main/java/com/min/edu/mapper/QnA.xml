@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.min.edu.qna">
+<insert id="insertQnAAll" parameterType="qnavo">
+INSERT INTO QNA
+(QNA_ID, QNA_TITLE, QNA_CONTENT, QNA_REGDATE, QNA_SECRET)
+VALUES((SELECT NVL(MAX(QNA_ID),0) FROM "QNA" q)+1 , #{qna_title}, #{qna_content}, #{qna_regdate}, #{qna_secret})
+
+</insert>
+
+<insert id="insertQnA_C" parameterType="qna_c">
+INSERT INTO "QNA-C"
+("QNA_ANSWER")
+VALUES(#{qna_answer})
+
+
+</insert>
+</mapper>
