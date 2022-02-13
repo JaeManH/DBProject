@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.min.edu.boards">
+<select id="selectBoardAll" resultType="boardvo">
+		SELECT BOARD_ID ,BOARD_WRITER ,BOARD_TITLE ,BOARD_CONTENT ,BOARD_REGDATE 
+			FROM BORAD b
+</select>
+</mapper>
