@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.min.edu.board">
+<insert id="insertBoardAll" parameterType="boardvo">
+INSERT INTO BOARD
+(BOARD_ID, BOARD_WRITER, BOARD_TITLE, BOARD_CONTENT, BOARD_REGDATE)
+VALUES((SELECT NVL(MAX(BOARD_ID),0) FROM "BOARD" b)+1 , #{board_writer}, #{board_title}, #{board_content}, #{board_regdate})
+</insert>
+</mapper>

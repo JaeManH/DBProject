@@ -5,6 +5,13 @@
 	<properties resource="properties/db.properties" />
 
 	<typeAliases>
+	<typeAlias type="com.min.edu.vo.MemberVo" alias="membervo"/>
+	<typeAlias type="com.min.edu.vo.ProductVo" alias="productvo"/>
+	<typeAlias type="com.min.edu.vo.CouponVo" alias="couponvo"/>
+	<typeAlias type="com.min.edu.vo.BoardVo" alias="boardvo"/>
+	<typeAlias type="com.min.edu.vo.QnAVo" alias="qnavo"/>
+	<typeAlias type="com.min.edu.vo.QnAVo" alias="qna_c"/>
+	<typeAlias type="com.min.edu.vo.AdminVo" alias="adminvo"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -21,7 +28,12 @@
 	</environments>
 
 	<mappers>
-		<mapper resource="com\min\edu\mapper\Member_mapper.xml"/>
+	<mapper resource="com/min/edu/mapper/Member.xml"/>
+	<mapper resource="com/min/edu/mapper/Product.xml"/>
+	<mapper resource="com/min/edu/mapper/Coupon.xml" />
+	<mapper resource="com/min/edu/mapper/Board.xml" />
+	<mapper resource="com/min/edu/mapper/QnA.xml" />
+	<mapper resource="com/min/edu/mapper/Admin.xml" />
 	</mappers>
 
 </configuration>
