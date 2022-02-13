@@ -22,7 +22,7 @@ public class SqlSessionFactoryManager {
 	
 	static {
 		//사용할 xml의 위치를 => IO읽은 메소드를 사용함 Resources
-		String path = "com/min/edu/mybatis/SqlMapConfig.xml";
+		String path = "com/min/edu/config/SqlMapConfig.xml";
 		//static 영역에서 작성하는 static 생성자기 떄문에 throw를 못함
 		try {
 			Reader reader = Resources.getResourceAsReader(path);

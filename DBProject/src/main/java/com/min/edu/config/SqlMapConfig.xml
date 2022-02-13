@@ -21,6 +21,7 @@
 	</environments>
 
 	<mappers>
+		<mapper resource="com\min\edu\mapper\Member_mapper.xml"/>
 	</mappers>
 
 </configuration>
