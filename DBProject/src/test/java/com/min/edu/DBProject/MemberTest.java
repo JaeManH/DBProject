@@ -15,6 +15,8 @@ import com.min.edu.vo.MemberVo;
 
 public class MemberTest {
 	
-	
+	private void syso() {
+
+	}
 	
 }
