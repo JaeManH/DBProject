@@ -2,12 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.min.edu.product">
 
-<insert id="insertProductAll" parameterType="productvo">
+<insert id="productRegistration" parameterType="productvo">
 
 INSERT INTO PRODUCT
 (PRODUCT_ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_INVENTORY, PRODUCT_DETAIL, PRODUCT_SOLD, PRODUCT_REGDATE)
-VALUES((SELECT NVL(MAX(PRODUCT_ID),0) FROM "PRODUCT" p)+1, #{product_name}, #{product_price}, #{product_inventory}, #{product_detail}, #{product_sold}, #{product_regdate})
+VALUES((SELECT NVL(MAX(PRODUCT_ID),0) FROM "PRODUCT" p)+1, #{product_name}, #{product_price}, #{product_inventory}, 
+#{product_detail}, 'N', SYSDATE)
 
 </insert>
   
+<select id="showProductList" resultType="productvo">
+<![CDATA[SELECT  PRODUCT_NAME , PRODUCT_PRICE ,PRODUCT_INVENTORY ,
+		PRODUCT_DETAIL , PRODUCT_SOLD , PRODUCT_REGDATE 
+	FROM (SELECT ROWNUM, PRODUCT_NAME , PRODUCT_PRICE ,PRODUCT_INVENTORY ,
+		PRODUCT_DETAIL , PRODUCT_SOLD , PRODUCT_REGDATE 
+	FROM PRODUCT p
+	ORDER BY PRODUCT_ID DESC)
+	WHERE ROWNUM <=5]]>
+
+</select>
 </mapper>

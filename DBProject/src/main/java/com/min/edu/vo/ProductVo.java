@@ -19,7 +19,7 @@ public class ProductVo implements Serializable{
 	}
 
 	public ProductVo(String product_name, int product_price, int product_inventory,
-			String product_detail, String product_sold, String product_regdate) {
+			String product_detail, String product_sold) {
 		super();
 //		this.product_id = product_id;
 		this.product_name = product_name;
@@ -27,7 +27,6 @@ public class ProductVo implements Serializable{
 		this.product_inventory = product_inventory;
 		this.product_detail = product_detail;
 		this.product_sold = product_sold;
-		this.product_regdate = product_regdate;
 	}
 
 	public int getProduct_id() {

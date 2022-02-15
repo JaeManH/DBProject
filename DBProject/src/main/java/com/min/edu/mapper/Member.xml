@@ -35,5 +35,4 @@ VALUES((SELECT NVL(MAX(MEMBER_ID),0) FROM "MEMBER" m)+1 , #{member_loginid} , #{
 
 </insert>
 
-
 </mapper>

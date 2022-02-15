@@ -44,11 +44,11 @@ public class LJM_JunitTest {
 		int row = dao.insert01(vo);
 		assertEquals(row, 1);
 	}
-//	@Test
+	@Test
 	public void productInsertTest() {
 		ProductIDUDao dao = new ProductIDUDaoImpl();
-		ProductVo vo = new ProductVo("1", 10, 10, "1", "1", "2022-01-01");
-		int row = dao.insert01(vo);
+		ProductVo vo = new ProductVo("상품1", 10000, 100, "1", "N");
+		int row = dao.productRegistration(vo);
 		assertEquals(row, 1);
 	}
 	
