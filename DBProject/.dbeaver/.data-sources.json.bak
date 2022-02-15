@@ -1,10 +1,10 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-17eede7fcd0-3aead3e6e2acfec5": {
+		"oracle_thin-17eec936f54-b62010731d6989a": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "DB",
+			"name": "XE",
 			"save-password": true,
 			"read-only": false,
 			"configuration": {
@@ -12,7 +12,7 @@
 				"port": "1521",
 				"database": "XE",
 				"url": "jdbc:oracle:thin:@//localhost:1521/XE",
-				"home": "C:\\app\\JOY\\product\\21c\\dbhomeXE",
+				"home": "C:\\app\\JaeMan\\product\\21c\\dbhomeXE",
 				"type": "dev",
 				"provider-properties": {
 					"show-only-one-schema@": "false",
