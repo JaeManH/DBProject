@@ -51,13 +51,13 @@ VALUES((SELECT NVL(MAX(MEMBER_ID),0) FROM "MEMBER" m)+1 , #{member_loginid} , #{
 
 	<select id="selectMember_update" parameterType="java.lang.Integer" resultType="membervo">
 		SELECT *
-			FROM "MEMBER"
+			FROM MEMBER
 			WHERE MEMBER_ID = #{member_id}
 	</select>
 	
 	<select id="chkLogIdPwd" parameterType="java.util.Map" resultType="membervo">
 		SELECT *
-			FROM "MEMBER" 
+			FROM MEMBER 
 			WHERE MEMBER_LOGINID = #{member_loginId} AND MEMBER_PASSWORD = #{member_password}
 	</select>
 	

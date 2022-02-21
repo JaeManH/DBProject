@@ -15,7 +15,7 @@ public class Login {
 		String input;
 		Map<String, Object> map = new HashMap<String, Object>();
 		MemberIDUDao dao = new MemberIDUDaoImpl();
-		MemberVo oneMemberVo = new MemberVo();
+		MemberVo oneVo = new MemberVo();
 		while(true) {
 			System.out.print("아이디를 입력해주세요 : ");
 			input = scan.next();
@@ -24,16 +24,16 @@ public class Login {
 			input = scan.next();
 			map.put("member_password", input);
 			
-			oneMemberVo = dao.chkLogIdPwd(map);
+			oneVo = dao.chkLogIdPwd(map);
 			
-			if(oneMemberVo != null) {
+			if(oneVo != null) {
 				break;
 			}else {
 				System.out.println("로그인에 실패했습니다\n");
 			}
 			
 		}
-		return oneMemberVo;
+		return oneVo;
 	}
 	
 }

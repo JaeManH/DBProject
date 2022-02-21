@@ -38,12 +38,12 @@ public class UsingCoupon {
 		}
 		
 		int price = pdPrice;
-		int couponPrice = (int) (price - (price*(cpvo.getCoupon_discount()*0.01)));
+		int cpPrice = (int) (price - (price*(cpvo.getCoupon_discount()*0.01)));
 		
-		System.out.println("\n할인된 가격은 "+couponPrice+"원 입니다.");
+		System.out.println("\n할인된 가격은 "+cpPrice+"원 입니다.");
 		
 		dao.delCoupon(cpvo.getCoupon_id());
-		return couponPrice;
+		return cpPrice;
 	}
 	
 }
