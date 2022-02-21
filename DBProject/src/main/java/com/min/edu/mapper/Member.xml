@@ -35,4 +35,10 @@ VALUES((SELECT NVL(MAX(MEMBER_ID),0) FROM "MEMBER" m)+1 , #{member_loginid} , #{
 
 </insert>
 
+<select id="chkLogIdPwd" parameterType="java.util.Map" resultType="membervo">
+		SELECT *
+			FROM "MEMBER" 
+			WHERE MEMBER_LOGINID = #{member_loginId} AND MEMBER_PASSWORD = #{member_password}
+	</select>
+
 </mapper>
