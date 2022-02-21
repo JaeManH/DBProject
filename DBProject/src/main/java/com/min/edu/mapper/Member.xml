@@ -35,4 +35,31 @@ VALUES((SELECT NVL(MAX(MEMBER_ID),0) FROM "MEMBER" m)+1 , #{member_loginid} , #{
 
 </insert>
 
+	<resultMap type="memberVo" id="memberMap">
+		<result column ="MEMBER_ID" property="member_id"/>
+		<result column ="MEMBER_LOGINID" property="member_loginId"/>
+		<result column ="MEMBER_PASSWORD" property="member_password"/>
+		<result column ="MEMBER_NAME" property="member_name"/>
+		<result column ="MEMBER_NICKNAME" property="member_nickName"/>
+		<result column ="MEMBER_PHONENUMBER" property="member_phoneNumber"/>
+		<result column ="MEMBER_BIRTH" property="member_birth"/>
+		<result column ="MEMBER_REGDATE" property="member_regdate"/>
+		<result column ="MEMBER_DEL" property="member_del"/>
+		<result column ="MEMBER_ADDRESS" property="member_address"/>
+		<result column ="MEMBER_EMAIL" property="member_email"/>
+	</resultMap>
+
+	<select id="selectMember_update" parameterType="java.lang.Integer" resultType="membervo">
+		SELECT *
+			FROM "MEMBER"
+			WHERE MEMBER_ID = #{member_id}
+	</select>
+	
+	<select id="chkLogIdPwd" parameterType="java.util.Map" resultType="membervo">
+		SELECT *
+			FROM "MEMBER" 
+			WHERE MEMBER_LOGINID = #{member_loginId} AND MEMBER_PASSWORD = #{member_password}
+	</select>
+	
+
 </mapper>
