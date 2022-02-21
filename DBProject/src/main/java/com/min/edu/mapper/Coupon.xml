@@ -10,14 +10,4 @@ VALUES((SELECT NVL(MAX(COUPON_ID),0) FROM "COUPON" c)+1, #{coupon_name}, #{coupo
 
 </insert>
 
-<select id="getCouponinfo" resultType="couponvo">
-	SELECT COUPON_ID, COUPON_NAME , COUPON_DISCOUNT 
-		FROM COUPON 
-</select>
-
-<delete id="delCoupon" parameterType="java.lang.Integer">
-	DELETE FROM COUPON
-		WHERE COUPON_ID = #{coupon_id}
-</delete>
-
 </mapper>

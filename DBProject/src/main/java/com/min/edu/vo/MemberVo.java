@@ -3,27 +3,15 @@ package com.min.edu.vo;
 import java.io.Serializable;
 
 public class MemberVo implements Serializable{
-/**
-	 * 
-	 */
-	private static final long serialVersionUID = 5790958869964253865L;
-//	MEMBER_ID, 
-//	MEMBER_LOGINID, 
-//	MEMBER_PASSWORD, 
-//	MEMBER_NAME, 
-//	MEMBER_NICKNAME, 
-//	MEMBER_PHONENUMBER, 
-//	MEMBER_BIRTH, 
-//	MEMBER_REGDATE, 
-//	MEMBER_DEL, 
-//	MEMBER_ADDRESS, 
-//	MEMBER_EMAIL
+
+	private static final long serialVersionUID = -1827148254100939227L;
+
 	private int member_id;
-	private String member_loginId;
+	private String member_loginid;
 	private String member_password;
 	private String member_name;
-	private String member_nickName;
-	private String member_phoneNumber;
+	private String member_nickname;
+	private String member_phonenumber;
 	private String member_birth;
 	private String member_regdate;
 	private String member_del;
@@ -31,33 +19,21 @@ public class MemberVo implements Serializable{
 	private String member_email;
 	
 	public MemberVo() {
-
 	}
 
-	public MemberVo(int member_id, String member_loginId, String member_password, String member_name,
-			String member_ninkName, String member_phoneNumber, String member_birth, String member_regdate,
+	public MemberVo( String member_loginid, String member_password, String member_name,
+			String member_nickname, String member_phonenumber, String member_birth,
 			String member_del, String member_address, String member_email) {
 		super();
-		this.member_id = member_id;
-		this.member_loginId = member_loginId;
+		this.member_loginid = member_loginid;
 		this.member_password = member_password;
 		this.member_name = member_name;
-		this.member_nickName = member_ninkName;
-		this.member_phoneNumber = member_phoneNumber;
+		this.member_nickname = member_nickname;
+		this.member_phonenumber = member_phonenumber;
 		this.member_birth = member_birth;
-		this.member_regdate = member_regdate;
 		this.member_del = member_del;
 		this.member_address = member_address;
 		this.member_email = member_email;
-	}
-
-	@Override
-	public String toString() {
-		return "MemberVo [member_id=" + member_id + ", member_loginId=" + member_loginId + ", member_password="
-				+ member_password + ", member_name=" + member_name + ", member_ninkName=" + member_nickName
-				+ ", member_phoneNumber=" + member_phoneNumber + ", member_birth=" + member_birth + ", member_regdate="
-				+ member_regdate + ", member_del=" + member_del + ", member_address=" + member_address
-				+ ", member_email=" + member_email + "]";
 	}
 
 	public int getMember_id() {
@@ -68,12 +44,12 @@ public class MemberVo implements Serializable{
 		this.member_id = member_id;
 	}
 
-	public String getMember_loginId() {
-		return member_loginId;
+	public String getMember_loginid() {
+		return member_loginid;
 	}
 
-	public void setMember_loginId(String member_loginId) {
-		this.member_loginId = member_loginId;
+	public void setMember_loginid(String member_loginid) {
+		this.member_loginid = member_loginid;
 	}
 
 	public String getMember_password() {
@@ -92,20 +68,20 @@ public class MemberVo implements Serializable{
 		this.member_name = member_name;
 	}
 
-	public String getMember_nickName() {
-		return member_nickName;
+	public String getMember_nickname() {
+		return member_nickname;
 	}
 
-	public void setMember_nickName(String member_nickName) {
-		this.member_nickName = member_nickName;
+	public void setMember_nickname(String member_nickname) {
+		this.member_nickname = member_nickname;
 	}
 
-	public String getMember_phoneNumber() {
-		return member_phoneNumber;
+	public String getMember_phonenumber() {
+		return member_phonenumber;
 	}
 
-	public void setMember_phoneNumber(String member_phoneNumber) {
-		this.member_phoneNumber = member_phoneNumber;
+	public void setMember_phonenumber(String member_phonenumber) {
+		this.member_phonenumber = member_phonenumber;
 	}
 
 	public String getMember_birth() {
@@ -148,6 +124,15 @@ public class MemberVo implements Serializable{
 		this.member_email = member_email;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "MemberVo [member_id=" + member_id + ", member_loginid=" + member_loginid + ", member_password="
+				+ member_password + ", member_name=" + member_name + ", member_nickname=" + member_nickname
+				+ ", member_phonenumber=" + member_phonenumber + ", member_birth=" + member_birth + ", member_regdate="
+				+ member_regdate + ", member_del=" + member_del + ", member_address=" + member_address
+				+ ", member_email=" + member_email + "]";
+	}
 
+
+	
 }

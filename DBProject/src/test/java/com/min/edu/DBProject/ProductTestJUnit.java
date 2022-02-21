@@ -34,7 +34,7 @@ public class ProductTestJUnit {
 		assertEquals(row, 1);
 	}
 
-//	@Test
+	@Test
 	public void showProduct() {
 		//리스트를 보여주는 것을 다듬어야함 
 		ProductIDUDao dao = new ProductIDUDaoImpl();

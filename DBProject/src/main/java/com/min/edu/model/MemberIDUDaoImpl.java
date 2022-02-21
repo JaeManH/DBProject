@@ -1,7 +1,5 @@
 package com.min.edu.model;
 
-import java.util.Map;
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.Logger;
@@ -20,12 +18,6 @@ public class MemberIDUDaoImpl implements MemberIDUDao{
 		SqlSession session = manager.openSession(true);
 		int row = session.insert(NS+"insertMemberAll",vo);
 		return row;
-	}
-
-	@Override
-	public MemberVo chkLogIdPwd(Map<String, Object> map) {
-		SqlSession session = manager.openSession();
-		return session.selectOne(NS+"chkLogIdPwd" , map);
 	}
 	
 	

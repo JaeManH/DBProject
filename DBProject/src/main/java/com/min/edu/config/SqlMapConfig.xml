@@ -5,7 +5,6 @@
 	<properties resource="properties/db.properties" />
 
 	<typeAliases>
-		<typeAlias type="com.min.edu.vo.MemberVo" alias="memberVo"/>
 	<typeAlias type="com.min.edu.vo.MemberVo" alias="membervo"/>
 	<typeAlias type="com.min.edu.vo.ProductVo" alias="productvo"/>
 	<typeAlias type="com.min.edu.vo.CouponVo" alias="couponvo"/>
@@ -29,7 +28,6 @@
 	</environments>
 
 	<mappers>
-	<mapper resource="com/min/edu/mapper/Member.xml"/>
 	<mapper resource="com/min/edu/mapper/Member.xml"/>
 	<mapper resource="com/min/edu/mapper/Product.xml"/>
 	<mapper resource="com/min/edu/mapper/Coupon.xml" />

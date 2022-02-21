@@ -17,7 +17,7 @@ public class CouponVo implements Serializable {
 
 	public CouponVo(String coupon_name, int coupon_discount, String coupon_sdate, String coupon_edate) {
 		super();
-		this.coupon_id = coupon_id;
+//		this.coupon_id = coupon_id;
 		this.coupon_name = coupon_name;
 		this.coupon_discount = coupon_discount;
 		this.coupon_sdate = coupon_sdate;
