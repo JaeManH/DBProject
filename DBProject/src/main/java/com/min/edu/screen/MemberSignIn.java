@@ -15,13 +15,13 @@ public class MemberSignIn {
 		vo.setMember_name(input);
 		System.out.println("아이디을 입력해주세요");
 		input = scan.next();
-		vo.setMember_loginid(input);
+		vo.setMember_loginId(input);
 		System.out.println("비밀번호을 입력해주세요");
 		input = scan.next();
 		vo.setMember_password(input);
 		System.out.println("전화번호을 입력해주세요");
 		input = scan.next();
-		vo.setMember_phonenumber(input);
+		vo.setMember_phoneNumber(input);
 		System.out.println("생년월일을 입력해주세요");
 		input = scan.next();
 		vo.setMember_birth(input);
@@ -30,7 +30,7 @@ public class MemberSignIn {
 		vo.setMember_address(input);
 		System.out.println("닉네임을 입력해주세요");
 		input = scan.next();
-		vo.setMember_nickname(input);
+		vo.setMember_nickName(input);
 		System.out.println("이메일을 입력해주세요");
 		input = scan.next();
 		vo.setMember_email(input);

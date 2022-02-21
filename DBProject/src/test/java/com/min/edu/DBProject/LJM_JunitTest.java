@@ -38,9 +38,9 @@ public class LJM_JunitTest {
 //	@Test
 	public void insertTest() {
 		MemberIDUDao dao = new MemberIDUDaoImpl();
-		MemberVo vo = new MemberVo("admin","1234","admin","admin", 
+		MemberVo vo = new MemberVo(0, "admin","1234","admin","admin", 
 				"010-1111-1111", "2022-02-12","N", "GOODEE", 
-				"aaa@naver.com");
+				"aaa@naver.com", null);
 		int row = dao.insert01(vo);
 		assertEquals(row, 1);
 	}
